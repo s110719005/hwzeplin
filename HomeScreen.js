@@ -28,7 +28,7 @@ class HomeScreen extends Component {
       <SafeAreaView style={[styles.container, { backgroundColor: '#00b49f' }]}>
       <StatusBar barStyle="light-content" backgroundColor="#f8f8f8" />
       <View style={styles.headerStyle}>
-        <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()}>
                   <Image style={{ width: 50, height: 50,marginLeft:16}}
                     source={require('./assets/btn_navbar_mobile.png')}
                   />

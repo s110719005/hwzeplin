@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View,SafeAreaView,ScrollView,Dimensions } from 'react-native'
+import { StyleSheet, Text, View,SafeAreaView,ScrollView,Dimensions,Image } from 'react-native'
 
 import {createDrawerNavigator,DrawerItems} from 'react-navigation'
 import HomeScreen from './HomeScreen'
@@ -21,7 +21,10 @@ export default class App extends React.Component {
 const CustomDrawerComponent = (props) => (
   <SafeAreaView style={{flex:1}}>
     <View style={{height:150,backgroundColor:"white"}}>
-      
+      <Image 
+        source= {require('./assets/img_user_photo.png')}
+        style = {{height:80,width:80}}
+      />
     </View>
     <ScrollView>
       <DrawerItems {...props}/>
@@ -31,6 +34,7 @@ const CustomDrawerComponent = (props) => (
 
 const AppDrawerNavigator = createDrawerNavigator({
   Home:HomeScreen,
+  "My Book":HomeScreen,
   Settings:SettingsScreen
 },{
   contentComponent:CustomDrawerComponent
