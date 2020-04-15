@@ -33,11 +33,22 @@ const CustomDrawerComponent = (props) => (
 )
 
 const AppDrawerNavigator = createDrawerNavigator({
-  Home:HomeScreen,
+  Home:{
+    screen:HomeScreen
+  },
   "My Book":HomeScreen,
   Settings:SettingsScreen
 },{
-  contentComponent:CustomDrawerComponent
+  initialRouteName: 'Home',
+  contentComponent:CustomDrawerComponent,
+  drawerWidth:335,
+  contentOptions:{
+    activeTintColor :'#ffffff',
+    inactiveTintColor :'#1999CE',
+
+   activeBackgroundColor :'#1999CE',
+   inactiveBackgroundColor :'#ffffff',
+  }
 })
 
 const styles = StyleSheet.create({

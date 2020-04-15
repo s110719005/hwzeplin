@@ -21,7 +21,13 @@ import SafeAreaView from 'react-native-safe-area-view';
 
 class HomeScreen extends Component {
   
-
+  static navigationOptions = {
+    drawerIcon : () => (
+      <Image 
+      source={require('./assets/icon_drawer_home.png')}
+      />
+    )
+  }
 
   render() {
     return (
