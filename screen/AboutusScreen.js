@@ -16,10 +16,10 @@ import {
 class AboutusScreen extends Component {
   
   static navigationOptions = {
-    drawerIcon : () => (
+    drawerIcon : ({tintColor}) => (
       <Image 
       source={require('../assets/icon_drawer_aboutus.png')}
-      style = {{width:24 ,height:24,marginBottom:20,marginTop:20}}
+      style = {{width:24 ,height:24,marginBottom:20,marginTop:20,tintColor:tintColor}}
       />
     )
   }
@@ -33,8 +33,9 @@ class AboutusScreen extends Component {
                     source={require('../assets/btn_navbar_mobile.png')}
                   />
         </TouchableOpacity>
-      <Text>SettingsScreen</Text>
+      
     </View>
+    <Text style={{color:"black",backgroundColor: '#ffffff'}}>AboutusScreen</Text>
     </SafeAreaView>
 
     )
@@ -46,9 +47,6 @@ export default AboutusScreen;
 
 const styles = StyleSheet.create({
   container5: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#00b49f',
   },
 });

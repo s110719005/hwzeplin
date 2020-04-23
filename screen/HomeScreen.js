@@ -24,10 +24,10 @@ import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 class HomeScreen extends Component {
   
   static navigationOptions = {
-    drawerIcon : () => (
+    drawerIcon : ({tintColor}) => (
       <Image 
       source={require('../assets/icon_drawer_mybook_pressed.png')}
-      style = {{width:24 ,height:24,marginBottom:20,marginTop:20}}
+      style = {{width:24 ,height:24,marginBottom:20,marginTop:20,tintColor:tintColor}}
       />
     )
   }
@@ -56,7 +56,7 @@ class HomeScreen extends Component {
     return (
       <Fragment>
       <SafeAreaView style={{ flex:0,backgroundColor: '#00b49f' }} />
-      <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }} >
+      {/* <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }} > */}
       <View style={styles.headerStyle}>
         <TouchableOpacity onPress={() => this.props.navigation.openDrawer()}>
                   <Image style={{ width: 50, height: 50,marginLeft:16}}
@@ -163,9 +163,37 @@ class HomeScreen extends Component {
             </Text>
           </View>
         </View>
+        <View style={{height:1,width:"100%",backgroundColor:"#d1d1d1"}}></View>
+
+        <View style={styles.listStyle}>
+          <View style={styles.imageStyle}> 
+            <Image style={{height:180,width:120,borderWidth:3,borderColor:"white",}}
+              source={require('../assets/img_streetartactivitybook.png')}
+            />
+          </View>
+          <View style={styles.listtextStyle}>
+            <Text style={{ color:"black",fontSize:18,fontWeight:"500",margin:10}}>
+              Street Art Activity Book
+            </Text>
+            <Text style={{ color:"#717171",fontSize:14,fontWeight:"500",margin:10}}>
+              Mitchell Beazley
+            </Text>
+            <Text style={{ color:"#b1b1b1",fontSize:12,fontWeight:"500",margin:10}}>
+              Street art is colorful, vibrant, diverse and exciting.Now, you can create…
+            </Text>
+            <View style={styles.listlineStyle}>
+              <View style={styles.listline1Style}></View>
+              <View style={styles.listline2Style}></View>
+            </View>
+            
+            <Text style={{ color:"#b1b1b1",fontSize:12,fontWeight:"500",margin:10}}>
+              50% completed
+            </Text>
+          </View>
+        </View>
       </ScrollView>
       
-      <View style={{height:1,width:"100%",backgroundColor:"#d1d1d1"}}></View>
+      {/* <View style={{height:1,width:"100%",backgroundColor:"#d1d1d1"}}></View>
       <View style={{backgroundColor:"#ffffff",height:80,flexDirection:"row",justifyContent:"space-around",alignItems:"center"}}>
         <View style={{}}>
           <Image style={{height:30,width:30,marginLeft:3}}
@@ -185,8 +213,8 @@ class HomeScreen extends Component {
           />
           <Text style={{color:"#818181"}}>Favorites</Text>
         </View>
-      </View>
-    </SafeAreaView>
+      </View> */}
+    {/* </SafeAreaView> */}
     </Fragment>  
 
     )
@@ -206,7 +234,7 @@ const styles = StyleSheet.create({
   container0: { flex: 1},
   contentStyle: {
     backgroundColor: "#f8f8f8",
-    height:"80%",
+    height:"100%",
     width:"100%"
 
   },

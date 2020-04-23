@@ -13,7 +13,7 @@ import {
 
 //custom components imports 
 
-class MybookScreen extends Component {
+class Mybook2Screen extends Component {
   
     static navigationOptions = {
         drawerIcon : ({tintColor}) => (
@@ -34,7 +34,7 @@ class MybookScreen extends Component {
                     />
           </TouchableOpacity>
       </View>
-        <Text style={{color:"black",backgroundColor: '#ffffff'}}>HomeScreen</Text>
+        <Text style={{color:"black",backgroundColor: '#ffffff'}}>Home2Screen</Text>
       </SafeAreaView>
       
 
@@ -43,7 +43,7 @@ class MybookScreen extends Component {
 
 }
 
-export default MybookScreen;
+export default Mybook2Screen;
 
 const styles = StyleSheet.create({
   container2: {

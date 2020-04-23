@@ -13,7 +13,7 @@ import {
 
 //custom components imports 
 
-class FavoritesScreen extends Component {
+class Favorites2Screen extends Component {
   
     static navigationOptions = {
         drawerIcon : ({tintColor}) => (
@@ -35,7 +35,7 @@ class FavoritesScreen extends Component {
         </TouchableOpacity>
       
       </View>
-      <Text style={{color:"black",backgroundColor: '#ffffff'}}>FavoritesScreen</Text>
+      <Text style={{color:"black",backgroundColor: '#ffffff'}}>Favorites2Screen</Text>
     </SafeAreaView>
       
 
@@ -44,7 +44,7 @@ class FavoritesScreen extends Component {
 
 }
 
-export default FavoritesScreen;
+export default Favorites2Screen;
 
 const styles = StyleSheet.create({
   container3: {
